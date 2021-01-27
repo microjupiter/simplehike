@@ -1,24 +1,27 @@
-# README
+<h1 align="center">Welcome to simplehike 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Search, log and review hiking trails
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+```sh
+npm install
+```
 
-* System dependencies
+## Author
 
-* Configuration
+👤 **Kyle Wilson**
 
-* Database creation
+* Website: www.hinterlandstills.com
+* Github: [@microjupiter](https://github.com/microjupiter)
+* LinkedIn: [@kylecwilson90](https://linkedin.com/in/kylecwilson90)
 
-* Database initialization
+## Show your support
 
-* How to run the test suite
+Give a ⭐️ if this project helped you!
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
