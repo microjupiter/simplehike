@@ -1,0 +1,10 @@
+<h1>List of all Parks</h1>
+
+<% @park.all.each do |t| %>
+<div class="container">
+<ul>
+<li><%= t.name %></li>
+<li><%= t.location %></li>
+</ul>
+<% end %>
+</div>
