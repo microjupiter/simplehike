@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     Hiker.find_by_id(session[:user_id]) if user_signed_in?
   end
 
+  def login_user
+    session[:user_id] = @hiker.id
+  end
+
   # configure do 
   #   enable :sessions
   #   set :public_folder, 'public'

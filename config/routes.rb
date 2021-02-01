@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get "/signup", to: "hikers#new", as: "signup"
   post "/signup", to: "hikers#create"
+  get "/login", to: "sessions#new", as: "login"
+  post "/login", to: "sessions#create"
+
+  delete "/logout", to: "sessions#destroy", as: "destroy_user_session"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
