@@ -1,5 +1,19 @@
 class ParksController < ApplicationController
   def show
-    @park = Park.all
+   
   end
+
+  def index
+    @parks = Park.all
+  end
+
+
+
+
+
+  # private
+
+  # def park_params
+  #   params.require(:park).permit(:name, :location, trails_attributes [:id, :name, :length, :difficulty])
+  # end
 end

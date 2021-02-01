@@ -1,0 +1,15 @@
+<h1>List of all Parks</h1>
+
+<% form_for(@park) do |park| %>
+<%= park.label "Name" %>
+<%= park.text_field :name %>
+<%= park.label "Location" %>
+<%= park.text_field :location %>
+
+<% park.fields_for :trails do |t| %>
+<%= t.collection_select(:trail_id, Trail.all, :id, :name) %>
+<% end %>
+
+<%= park.submit "Post" %>
+
+<% end %>

@@ -1,0 +1,12 @@
+<%= form_with model: @park, local: true do |f| %>
+    ...
+    <fieldset>
+        <legend>Trails:</legend>
+        <%= f.fields_for :trails do |review_form| %>
+            <%= render "review_fields", f: review_form %>
+        <% end %>
+        <%= link_to_add_fields "Add Review", f, :trails %>
+    </fieldset>
+
+    <%= f.submit %>
+<% end %>

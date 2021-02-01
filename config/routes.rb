@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'parks#index'
+
   resources :hikers
   resources :trails
   resources :parks
