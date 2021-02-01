@@ -19,6 +19,11 @@
 <% end %>
   <div class="container">
     <%= yield %>
+    <ul>
+    <li><%= link_to "Parks", parks_path %></li>
+    <li><%= link_to "Signup", signup_path %></li>
+    <li><%= link_to "Login", "#" %></li>
+    </ul>
     </div>
   </body>
 </html>

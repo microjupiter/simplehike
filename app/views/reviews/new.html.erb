@@ -1,3 +1,14 @@
+<% if @review.errors.any? %>
+ <h2>The following errors prevented the review from saving:</h2>
+ <ul>
+ <% @review.errors.full_messages.each do |msg|%>
+ <li><%= msg %></li>
+ <% end %>
+ </ul>
+<% end %>
+<br>
+<br>
+
 <h1>Create a new review</h1>
 
 <%= form_for @review do |r| %>
@@ -23,11 +34,3 @@
 
 
 
-<% if @review.errors.any? %>
- <h2>The following errors prevented the review from saving:</h2>
- <ul>
- <% @review.errors.full_messages.each do |msg|%>
- <li><%= msg %></li>
- <% end %>
- </ul>
-<% end %>

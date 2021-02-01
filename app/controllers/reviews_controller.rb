@@ -5,13 +5,14 @@ def new
 end
 
 def create
-  @review = Review.new(review_params)
-  if @review.save
-    flash[:notice] = "Your review was successfully posted"
-    redirect_to review_path(@review)
-  else 
-    render 'new'
-  end
+  render plain: params[:review].inspect
+  # @review = Review.new(review_params)
+  # if @review.save
+  #   flash[:notice] = "Your review was successfully posted"
+  #   redirect_to review_path(@review)
+  # else 
+  #   render 'new'
+  # end
 end
 
 def show
