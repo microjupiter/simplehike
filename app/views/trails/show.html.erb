@@ -1,13 +1,11 @@
-<h1>List of all Trails</h1>
-
-<% @trail.all.each do |t| %>
+<h1>This page shows one trail and its details/reveiws</h1>
+<br>
 <div class="container">
-<ul>
-<li><%= t.name %></li>
-<li><%= t.length %> Miles</li>
-<li><%= t.difficulty.capitalize %></li>
-<li><%= t.rating %></li>
-<li><%= t.park_id %></li>
+<ul> 
+<li>Name: <%= @trail.name %></li>
+<li>Rating: <%= @trail.rating %></li>
+<li>Difficulty: <%= @trail.difficulty %></li>
+<li>Length: <%= @trail.length %></li>
+<%= link_to "New Review", new_trail_review_url(@trail) %>
 </ul>
-<% end %>
 </div>

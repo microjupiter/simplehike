@@ -14,11 +14,7 @@
   <body>
   <%= render partial: 'layouts/nav', locals: { navbar_color: "indigo darken-3"} %>
   <%= render 'layouts/errors' %>
-  <% flash.each do |name, msg| %>
-    <ul>
-     <li><%= msg %></li>
-    </ul>
-<% end %>
+  
   <div class="container">
     <%= yield %>
     <ul>

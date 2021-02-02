@@ -11,3 +11,17 @@
 </ul>
 <% end %>
 </div>
+
+<h1>List of all Trails</h1>
+
+<% @trail.all.each do |t| %>
+<div class="container">
+<ul>
+<li><%= t.name %></li>
+<li><%= t.length %> Miles</li>
+<li><%= t.difficulty.capitalize %></li>
+<li><%= t.rating %></li>
+<li><%= t.park_id %></li>
+</ul>
+<% end %>
+</div>
