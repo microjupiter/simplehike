@@ -1,22 +1,20 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'parks#index'
 
-  resources :hikers
   resources :trails do
     resources :reviews
   end
   resources :parks
   resources :reviews
 
-  get "/signup", to: "hikers#new", as: "signup"
-  post "/signup", to: "hikers#create"
-  get "/login", to: "sessions#new", as: "login"
-  post "/login", to: "sessions#create"
+  # get "/login", to: "sessions#new", as: "login"
+  # post "/login", to: "sessions#create"
 
   # get "/parks/:id/reviews" to: "reviews#new"
 
-  delete "/logout", to: "sessions#destroy", as: "destroy_user_session"
+  # delete "/logout", to: "sessions#destroy", as: "destroy_user_session"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
