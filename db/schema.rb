@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(version: 2021_02_03_171923) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "rates", force: :cascade do |t|
+    t.integer "rater_id"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "stars", null: false
+    t.string "dimension"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type"
+    t.index ["rateable_type", "rateable_id"], name: "index_rates_on_rateable"
+    t.index ["rater_id"], name: "index_rates_on_rater_id"
+  end
+
   create_table "rating_caches", force: :cascade do |t|
     t.string "cacheable_type"
     t.integer "cacheable_id"

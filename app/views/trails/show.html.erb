@@ -9,3 +9,15 @@
 <%= link_to "New Review", new_trail_review_url(@trail) %>
 </ul>
 </div>
+
+<div class="row">
+  <div class="small-2 large-2 columns">
+    <%= imdb_style_rating_for @trail, current_user%>
+  </div>
+  <br>
+  <div class="small-2 large-4 columns">
+    <% if current_user %>
+      Trail Rating: <%= rating_for @trail, "trail_rating" %>
+    <% end %>
+  </div>
+</div>

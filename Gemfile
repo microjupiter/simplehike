@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt'
 gem 'devise'
 gem 'omniauth-facebook', '~> 1.0.0.pr2'
-gem 'ratyrate'
+gem 'ratyrate', :github => 'wazery/ratyrate', :branch => 'snyk-fix-d7d6a71c7c821142584e39c5cbaf202f'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
