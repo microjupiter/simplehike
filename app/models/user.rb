@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :trails, through: :reviews
 
   before_save :downcase_email
-  ratyrate_rater
+  
 
   def self.new_with_session(params, session)
     super.tap do |user|
@@ -27,6 +27,8 @@ class User < ApplicationRecord
       user.image = auth.info.image # assuming the user model has an image
     end
   end
+  
+  
 
   private
   def downcase_email

@@ -25,11 +25,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'bcrypt'
-gem 'devise'
-gem 'omniauth-facebook', '~> 1.0.0.pr2'
-gem 'ratyrate', :github => 'wazery/ratyrate', :branch => 'snyk-fix-d7d6a71c7c821142584e39c5cbaf202f'
+gem "omniauth-rails_csrf_protection"
+gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'omniauth-facebook'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'pry'
+gem 'jquery-rails'
+gem "font-awesome-rails"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

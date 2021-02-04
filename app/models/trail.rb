@@ -1,7 +1,7 @@
 class Trail < ApplicationRecord
   belongs_to :park
   has_many :reviews
-  ratyrate_rateable 'trail_rating'
+  has_many :users, through: :reviews
 
   # REVIEW_DIFFICULTY = ["Easy", "Moderate", "Hard"]
   # REVIEW_RATING = ["1", "2", "3", "4", "5"]

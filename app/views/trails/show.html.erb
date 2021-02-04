@@ -1,4 +1,5 @@
 <h1>This page shows one trail and its details/reveiws</h1>
+
 <br>
 <div class="container">
 <ul> 
@@ -17,7 +18,12 @@
   <br>
   <div class="small-2 large-4 columns">
     <% if current_user %>
-      Trail Rating: <%= rating_for @trail, "trail_rating" %>
+      Trail Rating: <%= rating_for @trail, "trail_rating", stars: 5, disable_after_rate: false %>
+      <br>
+      Trail Rating: <%= rating_for_user @trail, current_user, "trail_rating" %>
     <% end %>
   </div>
 </div>
+
+
+

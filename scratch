@@ -25,3 +25,36 @@
 </ul>
 <% end %>
 </div>
+
+
+
+<% if @review.errors.any? %>
+ <h2>The following errors prevented the review from saving:</h2>
+ <ul>
+ <% @review.errors.full_messages.each do |msg|%>
+ <li><%= msg %></li>
+ <% end %>
+ </ul>
+<% end %>
+<br>
+<br>
+
+<h1>Create a new review</h1>
+
+<%= form_for @review do |r| %>
+<p>
+<%= r.label :rating %>
+<%= r.text_field :rating %>
+</p>
+<p>
+<%= r.label :difficulty %>
+<%= r.number_field :difficulty %>
+</p>
+<p>
+<%= r.label :content %>
+<%= r.text_area :content %>
+</p>
+<p>
+<%= r.submit %>
+</p>
+<% end %>
