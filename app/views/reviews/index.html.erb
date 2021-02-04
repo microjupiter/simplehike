@@ -1,26 +1,18 @@
-<h1><b>List of all reviews</b></h1>
-<br>
-<br>
 
-<% @review.each do |foo| %>
+
+
+<h1><b>List of all reviews for <%= @trail.name %></h1>
+
+
+<% @reviews.each do |review| %>
+    
+
+
 <ul>
- <li><%=foo.name, park_path(foo)%></li>
-
-<li>Location: <%=foo.location %></li>
+ Here's what <%= @user_reviewed.name %> had to say about this dumb trail: 
+ <br>
+<%= review.content %>
 </ul>
 <% end %>
 
 
-
-<h1>Showing selected review</h1>
-<p>
- Trail: <%= @review.trail.name %>
-</p>
-<p>
-  Difficulty <%= @review.trail.difficulty.capitalize %>
-</p>
-<p>
- Here's what <%= @user_reviewed.name %> had to say about this dumb trail: 
- <br>
- <h1><%= @review.content %></h1>
-</p>

@@ -26,10 +26,13 @@ end
 def show
   @review = Review.find(params[:id])
   @user_reviewed = User.find_by(params[:id])
+  
 end
 
 def index
-  @review = Review.all
+  @trail = Trail.find(params[:trail_id])
+  @reviews = Review.where(:trail_id == @trail)
+  @user_reviewed = User.find_by(params[:id])
 end
 
 
