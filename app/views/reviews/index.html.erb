@@ -1,3 +1,17 @@
+<h1><b>List of all reviews</b></h1>
+<br>
+<br>
+
+<% @review.each do |foo| %>
+<ul>
+ <li><%=foo.name, park_path(foo)%></li>
+
+<li>Location: <%=foo.location %></li>
+</ul>
+<% end %>
+
+
+
 <h1>Showing selected review</h1>
 <p>
  Trail: <%= @review.trail.name %>

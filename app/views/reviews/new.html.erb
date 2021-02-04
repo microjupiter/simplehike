@@ -1,31 +1,17 @@
 <h1>Add A New Review</h1> 
 
 <%= form_for @review do |r| %>
+
 <%= r.hidden_field :user_id, value: current_user.id %>
+<%= r.hidden_field :trail_id, value: @trail.id %>
 
-<%= r.hidden_field :trail_id, value: @trail_id %>
-
-<div id=“rating-form”> 
-  <label>Rating</label> 
-</div>
+<h1>Tell me about your stupid hike</h1>
 
 <p><%= r.label :content %>
 <%= r.text_field :content %></p>
+<br>
+<br>
 
 <p><%= r.submit "Submit" %></p>
 <% end %>
-
-<div id="default" style="cursor: pointer;"><i class="fa fa-fw fa-star" title="bad" data-score="1"></i>&nbsp;<i class="fa fa-fw fa-star" title="poor" data-score="2"></i>&nbsp;<i class="fa fa-fw fa-star" title="regular" data-score="3"></i>&nbsp;<i class="fa fa-fw fa-star" title="good" data-score="4"></i>&nbsp;<i class="fa fa-fw fa-star" title="gorgeous" data-score="2"></i><input type="hidden" name="score" value="2"></div>
-
-<script src="jquery.raty.js"></script>
- 
-<div></div>
-
-<script>
-$(‘#rating-form’).raty({
-path: ‘/assets/’,
-scoreName: ‘review[rating]’
-});
-</script>
-
 
