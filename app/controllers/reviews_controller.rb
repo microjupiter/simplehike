@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 def new
   @review = Review.new
   @trail = Trail.find(params[:trail_id])
+  
 end
 
 def create
@@ -10,8 +11,9 @@ def create
   @user = current_user
   @user_reviewed = User.find_by(params[:id])
   
-  @trail = Trail.find_by(params[:id])
-  @review.trail_id = @trail.id
+  @trail = @review.trail_id
+  # byebug
+  # @review.trail_id = @trail.id
   
 
   if @review.save
@@ -26,7 +28,8 @@ end
 def show
   @review = Review.find(params[:id])
   @user_reviewed = User.find_by(params[:id])
-  @trail = Trail.find_by(params[:park_id])
+  @trail = @review.trail_id
+  # byebug
 end
 
 def index

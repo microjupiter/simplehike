@@ -2,6 +2,7 @@
 
 
 <h1><b>List of all reviews for <%= @trail.name %></h1>
+<h2><%= link_to "Leave a New Review", new_trail_review_url(@trail) %></h2>
 
 
 <% @reviews.each do |review| %>
