@@ -11,12 +11,12 @@
 </ul>
 </div>
 
+Here's what other hiker's had to say about the trails in this dumb park: 
 <% @reviews.each do |review| %>
 <% if review.trail_id == @trail.id %> 
+
 <ul>
- Here's what <%= @user_reviewed.name %> had to say about this dumb trail: 
- <br>
-<%= review.content %>
+<li><%= review.content %> - <%= @user_reviewed.name %></li>
 </ul>
 <% else %>
 <% end %>
