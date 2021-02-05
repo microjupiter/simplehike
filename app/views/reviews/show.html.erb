@@ -1,3 +1,5 @@
+<%# This page shows one review after submission of a new review %>
+
 <h1>Showing selected review</h1>
 <p>
  Trail: <%= @review.trail.name %>
@@ -10,3 +12,5 @@
  <br>
  <h1><%= @review.content %></h1>
 </p>
+
+<%= link_to "See what others had to say about this trail", trail_reviews_url(@trail) %>

@@ -5,14 +5,14 @@
 
 
 <% @reviews.each do |review| %>
-    
-
-
+<% if review.trail_id == @trail.id %> 
 <ul>
  Here's what <%= @user_reviewed.name %> had to say about this dumb trail: 
  <br>
 <%= review.content %>
 </ul>
+<% else %>
+<% end %>
 <% end %>
 
 
