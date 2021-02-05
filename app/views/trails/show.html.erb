@@ -11,19 +11,16 @@
 </ul>
 </div>
 
-<div class="row">
-  <div class="small-2 large-2 columns">
-    <%= imdb_style_rating_for @trail, current_user%>
-  </div>
-  <br>
-  <div class="small-2 large-4 columns">
-    <% if current_user %>
-      Trail Rating: <%= rating_for @trail, "trail_rating", stars: 5, disable_after_rate: false %>
-      <br>
-      Trail Rating: <%= rating_for_user @trail, current_user, "trail_rating" %>
-    <% end %>
-  </div>
-</div>
+<% @reviews.each do |review| %>
+<% if review.trail_id == @trail.id %> 
+<ul>
+ Here's what <%= @user_reviewed.name %> had to say about this dumb trail: 
+ <br>
+<%= review.content %>
+</ul>
+<% else %>
+<% end %>
+<% end %>
 
 
 
